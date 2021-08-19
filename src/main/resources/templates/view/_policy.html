@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>FileUpload</h2>
+
+				<div class="alert alert-success alert-dismissible fade show"
+					role="alert" th:if="${successMessage}">
+					<button type="button" class="close" data-dismiss="alert"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<strong th:text="${successMessage}"></strong>
+				</div>
+
+				<div class="alert alert-danger alert-dismissible fade show"
+					role="alert" th:if="${errorMessage}">
+					<button type="button" class="close" data-dismiss="alert"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<strong th:text="${errorMessage}"></strong>
+				</div>
+
+
+				<form action="" th:action="@{'/fileupload'}" th:object="${policy}"
+					method="post" enctype='multipart/form-data'>
+					<div class="form-group">
+						<label for="fileupload">File Upload(EXCEL or CSV or JSON)</label>
+						<input type="file" class="form-control" id="file" name="file"
+							th:field="*{file}">
+					</div>
+
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</form>
+			</div>
+			<div class="col-md-12">
+				<h2>All Policy</h2>
+
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>Nr polisy</th>
+							<th>Typ polisy</th>
+							<th>Suma ubezpieczenia</th>
+							<th>Imię ubezpieczonego</th>
+							<th>Nazwisko ubezpieczonego</th>
+							<th>Przedmiot ubezpieczonego</th>
+							<th>typ pliku</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="policy : ${_policy}">
+							<td th:text="${policy.policyNumber}"></td>
+							<td th:text="${policy.typeOfPolicy}"></td>
+							<td th:text="${policy.sumPolicy}"></td>
+							<td th:text="${policy.name}"></td>
+							<td th:text="${policy.surname}"></td>
+							<td th:text="${policy.insuredItem}"></td>
+							<td th:text="${policy.fileType}"></td>
+						</tr>
+
+					</tbody>
+				</table>
+
+			</div>
+
+		</div>
+	</div>
+
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
