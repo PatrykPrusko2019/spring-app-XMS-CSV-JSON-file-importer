@@ -14,4 +14,7 @@ adds a photo of the application's appearance and the content in the MySQL databa
 ![Przechwytywanie](https://user-images.githubusercontent.com/47269638/130147922-956b5c95-4e0a-4d7e-afac-40404841d5e8.JPG)
 ![zawartosc w bazie danych](https://user-images.githubusercontent.com/47269638/130147925-ae08c272-a542-4229-bb5a-9af6e4606efb.JPG)
 
+adds sql script:
+[ezyzip.zip](https://github.com/PatrykPrusko2019/spring-app-XMS-CSV-JSON-file-importer/files/7017871/ezyzip.zip)
+
 
