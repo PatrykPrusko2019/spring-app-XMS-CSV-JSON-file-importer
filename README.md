@@ -15,6 +15,7 @@ adds a photo of the application's appearance and the content in the MySQL databa
 ![zawartosc w bazie danych](https://user-images.githubusercontent.com/47269638/130147925-ae08c272-a542-4229-bb5a-9af6e4606efb.JPG)
 
 adds sql script:
-[ezyzip.zip](https://github.com/PatrykPrusko2019/spring-app-XMS-CSV-JSON-file-importer/files/7017871/ezyzip.zip)
+[ezyzip (1).zip](https://github.com/PatrykPrusko2019/spring-app-XMS-CSV-JSON-file-importer/files/7018204/ezyzip.1.zip)
+
 
 
